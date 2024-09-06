@@ -37,7 +37,7 @@ data_mode = 'debug'
 #     data_length = 2000
 #     test_length = 2000
 #     epochs = 10
-dataset_root = '/mnts2d/diis_data1/zmj/LCP_dataset/dataset/'
+dataset_root = './dataset/'
 if Nt==64:
     data_root = dataset_root + 'channel_dataset.mat'
 else:

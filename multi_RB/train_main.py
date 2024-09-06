@@ -37,7 +37,7 @@ epochs = args.epoch
 if data_mode=='debug':
     epochs = 20
 test_length = 2000
-dataset_root = '/mnts2d/diis_data1/zmj/LCP_dataset/dataset/'
+dataset_root = './dataset/'
 data_root = dataset_root + 'data/DUU_MISO_dataset_%d_%d_%d_%d_%d_%d.mat' % (Nt, Nr, K, dk,B, SNR_dB)
 train_mode = 'train'
 

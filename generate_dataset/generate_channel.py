@@ -32,9 +32,12 @@ def generate_channel_dataset(data_num,Nt,Nr,K,B,Lp,f_s,tap_range):
     return channel_dataset
 if __name__ == "__main__":
     print('begin to generated!!')
-    channel = generate_channel_dataset(4000,Nt = 16,Nr = 2, K = 10, B = 4, Lp = 10, f_s = 0.32*1e9, tap_range = 100)
+    channel = generate_channel_dataset(4000,Nt = 64,Nr = 4, K = 10, B = 4, Lp = 10, f_s = 0.32*1e9, tap_range = 100)
     save_root = './dataset/channel_dataset.mat'
     hdf5storage.savemat(save_root,{'H_list':channel})
     #import ipdb;ipdb.set_trace()
+
+#python3 generate_dataset.py --Nt 64 --Nr 4 --K 10 --dk 2 --B 4 --SNR 0 --SNR_channel 100 --gpu 0 --mode debug --batch_size 200 --epoch 1000 --factor 1
+
 
 
