@@ -24,7 +24,7 @@ python3 generate_dataset/generate_channel.py
   
 - generate_dataset.py: generate the labels for learning
 ```python
-python3 generate_dataset/generate_dataset.py --Nt 64 --Nr 4 --K 8 --dk 2 --B 1 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
+python3 generate_dataset/generate_dataset.py --Nt 64 --Nr 4 --K 10 --dk 2 --B 1 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
 ```
 
 ### Learning based precoding for single RB MIMO system
@@ -33,7 +33,7 @@ The folder ''`single_RB`'' contains the code for Fig. 2.
 - train_main.py: main training functions for the method presented in Fig 2. 
   Some baseline schemes (including ZF, WMMSE) are also provided.   
 ```python
-python3 -u single_RB/train_main.py --Nt 64 --Nr 4 --K 9 --dk 2 --B 1 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
+python3 -u single_RB/train_main.py --Nt 64 --Nr 4 --K 10 --dk 2 --B 1 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
 ```
 
 ### Learning based low complexity precoding design for OFDM-MIMO system
@@ -42,7 +42,7 @@ The folder ''`multi_RB`'' contains the code for the proposed method in Fig. 4.
 - train_main.py: main training functions for the method presented in Fig 4. 
   Some baseline schemes (including ZF, WMMSE) are also provided.   
 ```python
-python3 -u multi_RB/train_main.py --Nt 64 --Nr 4 --K 8 --dk 2 --B 4 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
+python3 -u multi_RB/train_main.py --Nt 64 --Nr 4 --K 10 --dk 2 --B 4 --SNR 0 --SNR_channel 100 --gpu 0 --mode gpu --batch_size 200 --epoch 1000 --factor 1
 ```
 ### Varying Number of User Streams
 The folder ''`differ_ds`'' contains the code for evaluating the performance when $d_k \neq d_j$. 
